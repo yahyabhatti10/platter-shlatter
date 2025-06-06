@@ -122,7 +122,7 @@ export default function OurStory() {
             {[
               {
                 name: "Zainab Abdullah",
-                role: "Co-Founder",
+                role: "Creative Cravings Director (Founder)",
                 image: "/images/our-team/zainab.png",
               },
               {
