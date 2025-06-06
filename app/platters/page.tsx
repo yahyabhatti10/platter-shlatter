@@ -1,6 +1,6 @@
-import Image from "next/image"
-import Link from "next/link"
-import { ArrowRight } from "lucide-react"
+import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 export default function Platters() {
   const platters = [
@@ -9,8 +9,9 @@ export default function Platters() {
       name: "Classic Mezze Platter",
       description:
         "A traditional Middle Eastern spread featuring hummus, baba ganoush, fresh vegetables, and artisanal crackers. Perfect for intimate gatherings and casual dining.",
-      ingredients: "Hummus, baba ganoush, olives, cherry tomatoes, cucumber, pita bread, crackers",
-      image: "/images/platter.jpg",
+      ingredients:
+        "Hummus, baba ganoush, olives, cherry tomatoes, cucumber, pita bread, crackers",
+      image: "/images/platter.png",
       reverse: false,
     },
     {
@@ -18,8 +19,9 @@ export default function Platters() {
       name: "Festive Celebration Board",
       description:
         "An elaborate arrangement of sweet and savory delights designed for special occasions. Features premium nuts, dried fruits, and gourmet treats.",
-      ingredients: "Mixed nuts, dried fruits, chocolate, cheese, crackers, honey, preserves",
-      image: "/placeholder.svg?height=250&width=250",
+      ingredients:
+        "Mixed nuts, dried fruits, chocolate, cheese, crackers, honey, preserves",
+      image: "/images/platter.png",
       reverse: true,
     },
     {
@@ -27,11 +29,12 @@ export default function Platters() {
       name: "Garden Fresh Platter",
       description:
         "A vibrant collection of fresh seasonal vegetables, homemade dips, and healthy snacks. Ideal for health-conscious gatherings.",
-      ingredients: "Fresh vegetables, yogurt dips, quinoa salad, seeds, herbs, whole grain crackers",
-      image: "/placeholder.svg?height=250&width=250",
+      ingredients:
+        "Fresh vegetables, yogurt dips, quinoa salad, seeds, herbs, whole grain crackers",
+      image: "/images/platter.png",
       reverse: false,
     },
-  ]
+  ];
 
   return (
     <div className="min-h-screen py-16 px-4 sm:px-6 lg:px-8 bg-white">
@@ -50,7 +53,9 @@ export default function Platters() {
           <div className="space-y-20">
             {/* Deal entries would go here - similar structure to platters */}
             <div className="text-center">
-              <p className="text-text-primary text-lg">Coming Soon - Exciting deals and packages!</p>
+              <p className="text-text-primary text-lg">
+                Coming Soon - Exciting deals and packages!
+              </p>
             </div>
           </div>
         </div>
@@ -61,7 +66,8 @@ export default function Platters() {
             Signature Platters
           </h1>
           <p className="text-lg text-text-primary max-w-3xl mx-auto leading-relaxed">
-            Explore our handcrafted wooden trays filled with savoury bites, sweet delights, dips, salads, and more.
+            Explore our handcrafted wooden trays filled with savoury bites,
+            sweet delights, dips, salads, and more.
           </p>
         </div>
 
@@ -89,16 +95,24 @@ export default function Platters() {
 
               {/* Content */}
               <div
-                className={`${platter.reverse ? "lg:order-1 lg:text-right" : ""} ${platter.reverse ? "lg:flex lg:flex-col lg:items-end" : ""}`}
+                className={`${
+                  platter.reverse ? "lg:order-1 lg:text-right" : ""
+                } ${platter.reverse ? "lg:flex lg:flex-col lg:items-end" : ""}`}
               >
-                <h2 className="font-lexend font-bold text-2xl sm:text-3xl text-text-primary mb-4">{platter.name}</h2>
+                <h2 className="font-lexend font-bold text-2xl sm:text-3xl text-text-primary mb-4">
+                  {platter.name}
+                </h2>
                 <p
-                  className={`text-text-primary leading-relaxed mb-4 max-w-lg ${platter.reverse ? "lg:text-right" : ""}`}
+                  className={`text-text-primary leading-relaxed mb-4 max-w-lg ${
+                    platter.reverse ? "lg:text-right" : ""
+                  }`}
                 >
                   {platter.description}
                 </p>
                 <p
-                  className={`text-text-primary italic text-sm mb-6 max-w-lg ${platter.reverse ? "lg:text-right" : ""}`}
+                  className={`text-text-primary italic text-sm mb-6 max-w-lg ${
+                    platter.reverse ? "lg:text-right" : ""
+                  }`}
                 >
                   <strong>Ingredients:</strong> {platter.ingredients}
                 </p>
@@ -121,7 +135,8 @@ export default function Platters() {
               Create Your Own
             </h2>
             <p className="text-lg text-text-primary max-w-3xl mx-auto leading-relaxed">
-              Design a custom platter tailored to your specific needs and preferences.
+              Design a custom platter tailored to your specific needs and
+              preferences.
             </p>
           </div>
 
@@ -131,7 +146,7 @@ export default function Platters() {
               <div>
                 <div className="relative w-64 h-64 mx-auto rounded-full overflow-hidden shadow-2xl border-4 border-accent-orange">
                   <Image
-                    src="/placeholder.svg?height=250&width=250"
+                    src="/images/platter.png"
                     alt="Custom Platter Design"
                     width={250}
                     height={250}
@@ -147,13 +162,15 @@ export default function Platters() {
                   Custom Platter Design
                 </h3>
                 <p className="text-text-primary leading-relaxed mb-4 max-w-lg">
-                  Work with our team to create the perfect platter for your event. Choose your favorite ingredients,
-                  dietary preferences, and presentation style. Every custom platter is uniquely crafted to match your
-                  vision.
+                  Work with our team to create the perfect platter for your
+                  event. Choose your favorite ingredients, dietary preferences,
+                  and presentation style. Every custom platter is uniquely
+                  crafted to match your vision.
                 </p>
                 <p className="text-text-primary italic text-sm mb-6 max-w-lg">
-                  <strong>Options:</strong> Your choice of ingredients, custom dietary requirements, personalized
-                  presentation, event-specific themes
+                  <strong>Options:</strong> Your choice of ingredients, custom
+                  dietary requirements, personalized presentation,
+                  event-specific themes
                 </p>
                 <Link
                   href="/contact"
@@ -168,5 +185,5 @@ export default function Platters() {
         </div>
       </div>
     </div>
-  )
+  );
 }

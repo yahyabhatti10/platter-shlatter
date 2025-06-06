@@ -1,5 +1,5 @@
-import Link from "next/link"
-import { Instagram, Facebook, Mail, Phone, MapPin } from "lucide-react"
+import Link from "next/link";
+import { Instagram, Facebook, Mail, Phone, MapPin } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -8,16 +8,20 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* About */}
           <div>
-            <h3 className="text-xl font-lexend font-bold mb-4 text-accent-orange">About Platter Shlatter</h3>
+            <h3 className="text-xl font-lexend font-bold mb-4 text-accent-orange">
+              About Platter Shlatter
+            </h3>
             <p className="text-sm leading-relaxed">
-              Handmade platters from Lahore. Follow us on Instagram @plattershlatter for daily updates and beautiful
-              food moments.
+              Handcrafted platters from Lahore. Follow us on social channels for
+              daily updates and beautiful food moments.
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-xl font-lexend font-bold mb-4 text-accent-orange">Quick Links</h3>
+            <h3 className="text-xl font-lexend font-bold mb-4 text-accent-orange">
+              Quick Links
+            </h3>
             <div className="space-y-2">
               {[
                 { href: "/", label: "Home" },
@@ -40,11 +44,13 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-xl font-lexend font-bold mb-4 text-accent-orange">Contact Info</h3>
+            <h3 className="text-xl font-lexend font-bold mb-4 text-accent-orange">
+              Contact Info
+            </h3>
             <div className="space-y-2 text-sm">
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4 text-accent-orange" />
-                <span>+92 321 8421990</span>
+                <span>+92 331 4696825</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4 text-accent-orange" />
@@ -59,13 +65,27 @@ export default function Footer() {
 
           {/* Follow Us */}
           <div>
-            <h3 className="text-xl font-lexend font-bold mb-4 text-accent-orange">Follow Us</h3>
+            <h3 className="text-xl font-lexend font-bold mb-4 text-accent-orange">
+              Follow Us
+            </h3>
             <div className="flex space-x-4">
               {[
-                { icon: Instagram, href: "#", label: "Instagram" },
-                { icon: Facebook, href: "#", label: "Facebook" },
+                {
+                  icon: Instagram,
+                  href: "https://www.instagram.com/plattershlatter/",
+                  label: "Instagram",
+                },
+                {
+                  icon: Facebook,
+                  href: "https://web.facebook.com/100083201597162/about/?_rdc=1&_rdr#",
+                  label: "Facebook",
+                },
                 { icon: Mail, href: "#", label: "Email" },
-                { icon: Phone, href: "#", label: "WhatsApp" },
+                {
+                  icon: Phone,
+                  href: "https://wa.link/3ydfwf",
+                  label: "WhatsApp",
+                },
               ].map(({ icon: Icon, href, label }) => (
                 <a
                   key={label}
@@ -81,9 +101,11 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-accent-orange mt-8 pt-8 text-center">
-          <p className="text-sm text-accent-brown">© 2025 Platter Shlatter. All rights reserved.</p>
+          <p className="text-sm">
+            © 2025 Platter Shlatter. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
-  )
+  );
 }

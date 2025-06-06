@@ -65,8 +65,8 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
+      {/* Hero Section (now 90vh) */}
+      <section className="min-h-[90vh] flex items-center justify-center px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center food-pattern-bg rounded-2xl p-8">
             {/* Left Column */}
@@ -75,7 +75,9 @@ export default function Home() {
                 Handcrafted Platters from Lahore
               </h1>
               <p className="text-xl text-text-primary mb-8 leading-relaxed">
-                Curated bites for every occasion—made with love.
+                From Lahore’s kitchens: homemade savoury bites, fresh salads,
+                crunchy crackers, creamy dips, decadent desserts, and seasonal
+                fruits on one stunning tray. Perfect for any celebration.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
@@ -85,10 +87,10 @@ export default function Home() {
                   Explore Our Platters
                 </Link>
                 <Link
-                  href="/contact"
+                  href="/our-story"
                   className="bg-accent-orange text-white px-8 py-3 rounded-xl font-medium hover:scale-105 hover:bg-accent-brown transition-all duration-300 text-center"
                 >
-                  Contact Us
+                  Our Story
                 </Link>
               </div>
             </div>
@@ -97,11 +99,11 @@ export default function Home() {
             <div className="animate-fade-in-right">
               <div className="relative overflow-hidden rounded-2xl">
                 <Image
-                  src="/images/platter.jpg"
+                  src="/images/hero-section.png"
                   alt="Beautiful handmade platter with various foods"
                   width={600}
                   height={600}
-                  className="w-full h-auto object-cover hover:scale-105 transition-transform duration-500"
+                  className="w-full h-auto object-cover"
                   loading="lazy"
                 />
               </div>
@@ -159,6 +161,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+
       {/* FAQ Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-4xl mx-auto">
