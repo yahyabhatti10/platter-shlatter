@@ -75,9 +75,8 @@ export default function Home() {
                 Handcrafted Platters from Lahore
               </h1>
               <p className="text-base text-text-primary mb-8 leading-relaxed">
-                From Lahore’s kitchens: homemade savoury bites, fresh salads,
-                crunchy crackers, creamy dips, decadent desserts, and seasonal
-                fruits on one stunning tray. Perfect for any celebration.
+                From Lahore’s kitchens: a curated tray of savoury bites, fresh
+                salads, dips, desserts, and fruits — perfect for any celebration
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
