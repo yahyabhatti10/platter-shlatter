@@ -71,7 +71,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center rounded-2xl p-8">
             {/* Left Column */}
             <div className="animate-fade-in-left">
-              <h1 className="font-festive font-bold text-5xl sm:text-6xl lg:text-8xl text-accent-orange mb-6">
+              <h1 className="font-festive font-bold text-6xl sm:text-8xl lg:text-9xl text-accent-orange mb-6">
                 Handcrafted Platters from Lahore
               </h1>
               <p className="text-base text-text-primary mb-8 leading-relaxed">
