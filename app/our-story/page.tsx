@@ -103,7 +103,7 @@ export default function OurStory() {
           </div>
           <div className="animate-fade-in-right">
             <Image
-              src="/images/logo.jpg"
+              src="/images/about-us.png"
               alt="About Platter Shlatter"
               width={500}
               height={500}

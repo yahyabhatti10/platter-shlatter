@@ -38,7 +38,7 @@ export default function Navbar() {
           <Link href="/" className="flex items-center space-x-3">
             <div className="w-10 h-10 rounded-full overflow-hidden">
               <Image
-                src="/images/logo.jpg"
+                src="/images/logo.png"
                 alt="Platter Shlatter Logo"
                 width={40}
                 height={40}
