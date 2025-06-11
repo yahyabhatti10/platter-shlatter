@@ -65,16 +65,16 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section (now 90vh) */}
-      <section className="min-h-[90vh] flex items-center justify-center px-4 sm:px-6 lg:px-8">
+      {/* Hero Section */}
+      <section className="min-h-[90vh] flex items-center justify-center px-4 sm:px-6 lg:px-8 food-pattern-bg">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center food-pattern-bg rounded-2xl p-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center rounded-2xl p-8">
             {/* Left Column */}
             <div className="animate-fade-in-left">
               <h1 className="font-festive font-bold text-5xl sm:text-6xl lg:text-8xl text-accent-orange mb-6">
                 Handcrafted Platters from Lahore
               </h1>
-              <p className="text-xl text-text-primary mb-8 leading-relaxed">
+              <p className="text-base text-text-primary mb-8 leading-relaxed">
                 From Lahore’s kitchens: homemade savoury bites, fresh salads,
                 crunchy crackers, creamy dips, decadent desserts, and seasonal
                 fruits on one stunning tray. Perfect for any celebration.

@@ -76,7 +76,7 @@ export default function OurStory() {
             <h2 className="font-lexend font-bold text-3xl text-text-primary mb-6">
               About Us
             </h2>
-            <p className="text-lg leading-relaxed text-text-primary max-w-2xl">
+            <p className="text-base leading-relaxed text-text-primary max-w-2xl">
               Since 2021, Platter Shlatter has been creating handmade delights
               straight from Lahore’s kitchens. Zainab Abdullah and Abdullah Asim
               began by sharing beautifully arranged wooden trays on Instagram,
