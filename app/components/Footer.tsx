@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* About */}
-          <div>
+          <div className="text-center md:text-left">
             <h3 className="text-xl font-lexend font-bold mb-4 text-accent-orange">
               About Platter Shlatter
             </h3>
@@ -18,7 +18,7 @@ export default function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div>
+          <div className="text-center md:text-left">
             <h3 className="text-xl font-lexend font-bold mb-4 text-accent-orange">
               Quick Links
             </h3>
@@ -43,20 +43,20 @@ export default function Footer() {
           </div>
 
           {/* Contact Info */}
-          <div>
+          <div className="text-center md:text-left">
             <h3 className="text-xl font-lexend font-bold mb-4 text-accent-orange">
               Contact Info
             </h3>
             <div className="space-y-2 text-sm">
-              <div className="flex items-center space-x-2">
+              <div className="flex justify-center md:justify-start items-center space-x-2">
                 <Phone className="w-4 h-4 text-accent-orange" />
                 <span>+92 331 4696825</span>
               </div>
-              <div className="flex items-center space-x-2">
+              <div className="flex justify-center md:justify-start items-center space-x-2">
                 <Mail className="w-4 h-4 text-accent-orange" />
                 <span>contact@plattershlatter.com</span>
               </div>
-              <div className="flex items-center space-x-2">
+              <div className="flex justify-center md:justify-start items-center space-x-2">
                 <MapPin className="w-4 h-4 text-accent-orange" />
                 <span>Lahore, Pakistan</span>
               </div>
@@ -64,11 +64,11 @@ export default function Footer() {
           </div>
 
           {/* Follow Us */}
-          <div>
+          <div className="text-center md:text-left">
             <h3 className="text-xl font-lexend font-bold mb-4 text-accent-orange">
               Follow Us
             </h3>
-            <div className="flex space-x-4">
+            <div className="flex justify-center md:justify-start space-x-4">
               {[
                 {
                   icon: Instagram,
