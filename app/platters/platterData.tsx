@@ -1,17 +1,17 @@
 export const platters = [
   {
     id: 1,
-    name: "A-Corn-Plished",
+    name: "Acornplished",
     description:
       "A hearty corn‑themed board loaded with gourmet crackers, cheeses, nachos and salsa, cold cuts, brownie bites, and a mix of nuts, baby corns and two house‑made dips.",
     ingredients:
-      "Assorted Gourmet Crackers, 2 Kinds of Cheese, Nachos, Salsa, Cold Cuts, Brownie Bites, Pizza Chickewenges, Main Corns, Nuts & Cocktails Salads, Pickled Cucumbers, Baby Corns, 2 Dips",
+      "Assorted Gourmet Crackers, 2 Kinds of Cheese, Nachos, Salsa, Cold Cuts, Brownie Bites, Pizza Chickenveges, Main Corns, Nuts & Cocktails Salads, Pickled Cucumbers, Baby Corns, 2 Dips",
     sizes: [
       { size: "14”", price: "Rs. 5500" },
       { size: "16”", price: "Rs. 7000" },
       { size: "18”", price: "Rs. 9000" },
     ],
-    image: "/images/platter.png",
+    image: "/images/platters/signature/acornplished.png",
     reverse: false,
   },
   {
@@ -20,7 +20,7 @@ export const platters = [
     description:
       "A dip lover’s dream featuring four creamy dips, premium crackers, cheeses, baked croissants, devilled eggs, fresh fruits and sweet chocolate donuts.",
     ingredients:
-      "Assorted Gourmet Crackers, 2 Kinds of Cheese, Nachos, Salsa, Cold Cuts, Brownie Bites, Pickled Cucumbers, Honey BBQ Wings, Butter Croissants, Fresh Fruits, Devilled Eggs, Chocolate Donuts, 4 Dips",
+      "Assorted Gourmet Crackers, 2 Kinds of Cheese, Nachos, Salsa, Cold Cuts, Brownie Bites, Pickled Cucumbers, Honey BBQ Wings, Butter Croissants, Fresh Fruits, Devilled Eggs, Chocolate Donuts, Hummus, Pita, Baba Ganoush and Qeema Dip",
     sizes: [
       { size: "14”", price: "Rs. 5500" },
       { size: "16”", price: "Rs. 7000" },
@@ -41,7 +41,7 @@ export const platters = [
       { size: "16”", price: "Rs. 7000" },
       { size: "18”", price: "Rs. 9000" },
     ],
-    image: "/images/platter.png",
+    image: "/images/platters/signature/valentino.png",
     reverse: false,
   },
   {
@@ -56,7 +56,7 @@ export const platters = [
       { size: "16”", price: "Rs. 9500" },
       { size: "18”", price: "Rs. 10500" },
     ],
-    image: "/images/platter.png",
+    image: "/images/platters/signature/cheesalicious.png",
     reverse: true,
   },
   {
@@ -71,7 +71,7 @@ export const platters = [
       { size: "16”", price: "Rs. 8500" },
       { size: "18”", price: "Rs. 10500" },
     ],
-    image: "/images/platter.png",
+    image: "/images/platters/signature/fire-cracker.png",
     reverse: false,
   },
   {
@@ -86,12 +86,12 @@ export const platters = [
       { size: "16”", price: "Rs. 8500" },
       { size: "18”", price: "Rs. 10500" },
     ],
-    image: "/images/platter.png",
+    image: "/images/platters/signature/babys-day-out.png",
     reverse: true,
   },
   {
     id: 7,
-    name: "Health It Wealth",
+    name: "Health is Wealth",
     description:
       "A wellness‑focused board featuring sautéed veggies, low‑fat dips, fresh fruits, cheesy mushrooms and protein‑packed bites.",
     ingredients:
@@ -164,7 +164,7 @@ export const occasionalPlatters = [
   },
   {
     id: 12,
-    name: "Wedding Platter",
+    name: "Mehandi Platter",
     description:
       "A grand spread featuring premium ingredients—perfect for wedding receptions and large gatherings.",
     ingredients: "Mini wraps, skewers, dips, artisan breads, dessert cups",
@@ -177,21 +177,6 @@ export const occasionalPlatters = [
 export const dealPlatters = [
   {
     id: 13,
-    name: "Sweet and Savoury Platter",
-    description:
-      "A balanced board of sweet coffee cups, lemon tarts, crispy chicken wings and savory bites, perfect for any event.",
-    ingredients:
-      "Chicken Bread, Crispy Chicken Buffalo Wings, Chicken Patties, Coffee Choco Cups, Lemon Tarts, Nachos and Salsa, Assorted Homemade Crackers with Dips, Seasonal Fruit",
-    sizes: [
-      { size: "Small", price: "Rs. 6000" },
-      { size: "Medium", price: "Rs. 7000" },
-      { size: "Large", price: "Rs. 8000" },
-    ],
-    image: "/images/platter.png",
-    reverse: true,
-  },
-  {
-    id: 14,
     name: "Crispy Delight Platter",
     description:
       "A crunchy feast of fried roast, chowmein, mini burgers and sweet brownies—ideal for indulgent gatherings.",
@@ -206,7 +191,7 @@ export const dealPlatters = [
     reverse: false,
   },
   {
-    id: 15,
+    id: 14,
     name: "Light & Tasty Platter",
     description:
       "A lighter option featuring chicken wings, assorted crackers, dips and a tea‑cake for the perfect snack balance.",
@@ -221,7 +206,7 @@ export const dealPlatters = [
     reverse: true,
   },
   {
-    id: 16,
+    id: 15,
     name: "Cheese & Dip Platter",
     description:
       "An indulgent cheese board with dips, pita chips, seasonal fruits and two hard‑cheese varieties.",
@@ -234,6 +219,21 @@ export const dealPlatters = [
     ],
     image: "/images/platter.png",
     reverse: false,
+  },
+  {
+    id: 16,
+    name: "Sweet and Savoury Platter",
+    description:
+      "A balanced board of sweet coffee cups, lemon tarts, crispy chicken wings and savory bites, perfect for any event.",
+    ingredients:
+      "Chicken Bread, Crispy Chicken Buffalo Wings, Chicken Patties, Coffee Choco Cups, Lemon Tarts, Nachos and Salsa, Assorted Homemade Crackers with Dips, Seasonal Fruit",
+    sizes: [
+      { size: "Small", price: "Rs. 6000" },
+      { size: "Medium", price: "Rs. 7000" },
+      { size: "Large", price: "Rs. 8000" },
+    ],
+    image: "/images/platter.png",
+    reverse: true,
   },
 ];
 
