@@ -1,41 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { platters, occasionalPlatters, dealPlatters } from "./platterData";
 
 export default function Platters() {
-  const platters = [
-    {
-      id: 1,
-      name: "Classic Mezze Platter",
-      description:
-        "A traditional Middle Eastern spread featuring hummus, baba ganoush, fresh vegetables, and artisanal crackers. Perfect for intimate gatherings and casual dining.",
-      ingredients:
-        "Hummus, baba ganoush, olives, cherry tomatoes, cucumber, pita bread, crackers",
-      image: "/images/platter.png",
-      reverse: false,
-    },
-    {
-      id: 2,
-      name: "Festive Celebration Board",
-      description:
-        "An elaborate arrangement of sweet and savory delights designed for special occasions. Features premium nuts, dried fruits, and gourmet treats.",
-      ingredients:
-        "Mixed nuts, dried fruits, chocolate, cheese, crackers, honey, preserves",
-      image: "/images/platter.png",
-      reverse: true,
-    },
-    {
-      id: 3,
-      name: "Garden Fresh Platter",
-      description:
-        "A vibrant collection of fresh seasonal vegetables, homemade dips, and healthy snacks. Ideal for health-conscious gatherings.",
-      ingredients:
-        "Fresh vegetables, yogurt dips, quinoa salad, seeds, herbs, whole grain crackers",
-      image: "/images/platter.png",
-      reverse: false,
-    },
-  ];
-
   return (
     <div className="min-h-screen py-16 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
@@ -43,7 +11,7 @@ export default function Platters() {
         <div className="mb-20">
           <div className="text-center mb-16">
             <h2 className="font-lexend font-extrabold text-4xl sm:text-5xl text-text-primary section-underline mb-8">
-              Deals
+              Deal Platters
             </h2>
             <p className="text-lg text-text-primary max-w-3xl mx-auto leading-relaxed">
               Special offers and combo deals for your events and gatherings.
@@ -51,16 +19,62 @@ export default function Platters() {
           </div>
 
           <div className="space-y-20">
-            {/* Deal entries would go here - similar structure to platters */}
-            <div className="text-center">
-              <p className="text-text-primary text-lg">
-                Coming Soon - Exciting deals and packages!
-              </p>
-            </div>
+            {dealPlatters.map((deal, index) => (
+              <div
+                key={deal.id}
+                className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center animate-fade-in-up"
+                style={{ animationDelay: `${index * 0.2}s` }}
+              >
+                {/* Image */}
+                <div className={deal.reverse ? "lg:order-2" : ""}>
+                  <div className="relative w-64 h-64 mx-auto rounded-full overflow-hidden shadow-2xl border-4 border-accent-orange">
+                    <Image
+                      src={deal.image}
+                      alt={deal.name}
+                      width={250}
+                      height={250}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div
+                  className={`${
+                    deal.reverse
+                      ? "lg:order-1 lg:text-right lg:flex lg:flex-col lg:items-end"
+                      : ""
+                  }`}
+                >
+                  <h2 className="font-lexend font-bold text-2xl sm:text-3xl text-text-primary mb-4">
+                    {deal.name}
+                  </h2>
+                  <p className="text-text-primary leading-relaxed mb-4 max-w-lg">
+                    {deal.description}
+                  </p>
+                  <p className="text-text-primary italic text-sm mb-4 max-w-lg">
+                    <strong>Ingredients:</strong> {deal.ingredients}
+                  </p>
+                  {/* {deal.note && (
+                    <p className="text-text-primary text-sm mb-4 max-w-lg italic">
+                      <strong>Note:</strong> {deal.note}
+                    </p>
+                  )} */}
+                  <Link
+                    href={`/platters/${deal.id}`}
+                    className="inline-flex items-center text-accent-orange font-medium transition-colors duration-200 group bg-white px-4 py-2 rounded-xl border border-accent-orange hover:bg-accent-orange hover:text-white"
+                  >
+                    <ArrowRight className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform duration-200" />
+                    View Full Details
+                  </Link>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 
-        {/* Header */}
+        {/* Signature Platters */}
         <div className="text-center mb-16">
           <h1 className="font-lexend font-extrabold text-4xl sm:text-5xl text-text-primary section-underline mb-8">
             Signature Platters
@@ -71,23 +85,22 @@ export default function Platters() {
           </p>
         </div>
 
-        {/* Platter Entries */}
         <div className="space-y-20">
           {platters.map((platter, index) => (
             <div
               key={platter.id}
-              className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center animate-fade-in-up`}
+              className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center animate-fade-in-up"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               {/* Image */}
-              <div className={`${platter.reverse ? "lg:order-2" : ""}`}>
+              <div className={platter.reverse ? "lg:order-2" : ""}>
                 <div className="relative w-64 h-64 mx-auto rounded-full overflow-hidden shadow-2xl border-4 border-accent-orange">
                   <Image
-                    src={platter.image || "/placeholder.svg"}
+                    src={platter.image}
                     alt={platter.name}
                     width={250}
                     height={250}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover"
                     loading="lazy"
                   />
                 </div>
@@ -96,29 +109,23 @@ export default function Platters() {
               {/* Content */}
               <div
                 className={`${
-                  platter.reverse ? "lg:order-1 lg:text-right" : ""
-                } ${platter.reverse ? "lg:flex lg:flex-col lg:items-end" : ""}`}
+                  platter.reverse
+                    ? "lg:order-1 lg:text-right lg:flex lg:flex-col lg:items-end"
+                    : ""
+                }`}
               >
                 <h2 className="font-lexend font-bold text-2xl sm:text-3xl text-text-primary mb-4">
                   {platter.name}
                 </h2>
-                <p
-                  className={`text-text-primary leading-relaxed mb-4 max-w-lg ${
-                    platter.reverse ? "lg:text-right" : ""
-                  }`}
-                >
+                <p className="text-text-primary leading-relaxed mb-4 max-w-lg">
                   {platter.description}
                 </p>
-                <p
-                  className={`text-text-primary italic text-sm mb-6 max-w-lg ${
-                    platter.reverse ? "lg:text-right" : ""
-                  }`}
-                >
+                <p className="text-text-primary italic text-sm mb-6 max-w-lg">
                   <strong>Ingredients:</strong> {platter.ingredients}
                 </p>
                 <Link
                   href={`/platters/${platter.id}`}
-                  className="inline-flex items-center text-accent-orange font-medium hover:text-accent-brown transition-colors duration-200 group bg-white px-4 py-2 rounded-xl border border-accent-orange hover:bg-accent-orange hover:text-white"
+                  className="inline-flex items-center text-accent-orange font-medium transition-colors duration-200 group bg-white px-4 py-2 rounded-xl border border-accent-orange hover:bg-accent-orange hover:text-white"
                 >
                   <ArrowRight className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform duration-200" />
                   View Full Details
@@ -126,6 +133,69 @@ export default function Platters() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Occasional Platters */}
+        <div className="mt-20">
+          <div className="text-center mb-16">
+            <h2 className="font-lexend font-extrabold text-4xl sm:text-5xl text-text-primary section-underline mb-8">
+              Occasional Platters
+            </h2>
+            <p className="text-lg text-text-primary max-w-3xl mx-auto leading-relaxed">
+              Specially themed platters for birthdays, engagements, weddings,
+              and more.
+            </p>
+          </div>
+
+          <div className="space-y-20">
+            {occasionalPlatters.map((platter, index) => (
+              <div
+                key={platter.id}
+                className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center animate-fade-in-up"
+                style={{ animationDelay: `${index * 0.2}s` }}
+              >
+                {/* Image */}
+                <div className={platter.reverse ? "lg:order-2" : ""}>
+                  <div className="relative w-64 h-64 mx-auto rounded-full overflow-hidden shadow-2xl border-4 border-accent-orange">
+                    <Image
+                      src={platter.image}
+                      alt={platter.name}
+                      width={250}
+                      height={250}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div
+                  className={`${
+                    platter.reverse
+                      ? "lg:order-1 lg:text-right lg:flex lg:flex-col lg:items-end"
+                      : ""
+                  }`}
+                >
+                  <h2 className="font-lexend font-bold text-2xl sm:text-3xl text-text-primary mb-4">
+                    {platter.name}
+                  </h2>
+                  <p className="text-text-primary leading-relaxed mb-4 max-w-lg">
+                    {platter.description}
+                  </p>
+                  <p className="text-text-primary italic text-sm mb-6 max-w-lg">
+                    <strong>Ingredients:</strong> {platter.ingredients}
+                  </p>
+                  <Link
+                    href={`/platters/${platter.id}`}
+                    className="inline-flex items-center text-accent-orange font-medium transition-colors duration-200 group bg-white px-4 py-2 rounded-xl border border-accent-orange hover:bg-accent-orange hover:text-white"
+                  >
+                    <ArrowRight className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform duration-200" />
+                    View Full Details
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Create Your Own Section */}
@@ -142,7 +212,6 @@ export default function Platters() {
 
           <div className="space-y-20">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center animate-fade-in-up">
-              {/* Image */}
               <div>
                 <div className="relative w-64 h-64 mx-auto rounded-full overflow-hidden shadow-2xl border-4 border-accent-orange">
                   <Image
@@ -150,13 +219,12 @@ export default function Platters() {
                     alt="Custom Platter Design"
                     width={250}
                     height={250}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover"
                     loading="lazy"
                   />
                 </div>
               </div>
 
-              {/* Content */}
               <div>
                 <h3 className="font-lexend font-bold text-2xl sm:text-3xl text-text-primary mb-4">
                   Custom Platter Design
@@ -174,7 +242,7 @@ export default function Platters() {
                 </p>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center text-accent-orange font-medium hover:text-accent-brown transition-colors duration-200 group bg-white px-4 py-2 rounded-xl border border-accent-orange hover:bg-accent-orange hover:text-white"
+                  className="inline-flex items-center text-accent-orange font-medium transition-colors duration-200 group bg-white px-4 py-2 rounded-xl border border-accent-orange hover:bg-accent-orange hover:text-white"
                 >
                   <ArrowRight className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform duration-200" />
                   Start Designing
