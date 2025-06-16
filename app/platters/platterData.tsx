@@ -134,11 +134,26 @@ export const platters = [
     image: "/images/platter.png",
     reverse: false,
   },
+  {
+    id: 10,
+    name: "Fruitylicious",
+    description:
+      "A vibrant and refreshing platter loaded with a colorful mix of seasonal fruits. Perfect for summer brunches, picnics, and health-conscious gatherings.",
+    ingredients:
+      "Watermelon, Mango, Grapes, Kiwi, Strawberries, Melon, Pineapple, Apple Slices, Orange Segments, Dragon Fruit, Blueberries (subject to availability)",
+    sizes: [
+      { size: "14”", price: "Rs. 5500" },
+      { size: "16”", price: "Rs. 7000" },
+      { size: "18”", price: "Rs. 8500" },
+    ],
+    image: "/images/platters/signature/fruitylicious.png",
+    reverse: true,
+  },
 ];
 
 export const occasionalPlatters = [
   {
-    id: 10,
+    id: 11,
     name: "Birthday Platter",
     description:
       "Celebrate birthdays with a colorful mix of sweet treats and savory bites, ideal for all ages.",
@@ -153,7 +168,7 @@ export const occasionalPlatters = [
     reverse: false,
   },
   {
-    id: 11,
+    id: 12,
     name: "Engagement Platter",
     description:
       "Elegantly arranged selection of cheeses, cold cuts, and gourmet nibbles for a memorable engagement party.",
@@ -163,7 +178,7 @@ export const occasionalPlatters = [
     reverse: true,
   },
   {
-    id: 12,
+    id: 13,
     name: "Mehandi Platter",
     description:
       "A grand spread featuring premium ingredients—perfect for wedding receptions and large gatherings.",
@@ -176,7 +191,7 @@ export const occasionalPlatters = [
 
 export const dealPlatters = [
   {
-    id: 13,
+    id: 14,
     name: "Crispy Delight Platter",
     description:
       "A crunchy feast of fried roast, chowmein, mini burgers and sweet brownies—ideal for indulgent gatherings.",
@@ -191,7 +206,7 @@ export const dealPlatters = [
     reverse: false,
   },
   {
-    id: 14,
+    id: 15,
     name: "Light & Tasty Platter",
     description:
       "A lighter option featuring chicken wings, assorted crackers, dips and a tea‑cake for the perfect snack balance.",
@@ -206,7 +221,7 @@ export const dealPlatters = [
     reverse: true,
   },
   {
-    id: 15,
+    id: 16,
     name: "Cheese & Dip Platter",
     description:
       "An indulgent cheese board with dips, pita chips, seasonal fruits and two hard‑cheese varieties.",
@@ -221,7 +236,7 @@ export const dealPlatters = [
     reverse: false,
   },
   {
-    id: 16,
+    id: 17,
     name: "Sweet and Savoury Platter",
     description:
       "A balanced board of sweet coffee cups, lemon tarts, crispy chicken wings and savory bites, perfect for any event.",
