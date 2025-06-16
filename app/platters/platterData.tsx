@@ -164,7 +164,7 @@ export const occasionalPlatters = [
       { size: "Medium", price: "Rs. 7500" },
       { size: "Large", price: "Rs. 8500" },
     ],
-    image: "/images/platter.png",
+    image: "/images/platters/occasional/birthday.png",
     reverse: false,
   },
   {

@@ -99,7 +99,7 @@ export default function PlatterDetails({ params }: PlatterDetailsProps) {
               )}
 
               {/* Order Button */}
-              <div className="pt-6">
+              <div className="pt-6 w-full flex justify-center lg:justify-start">
                 <Link
                   href="/contact"
                   className="bg-accent-orange text-white px-8 py-3 rounded-xl font-medium hover:scale-105 hover:bg-accent-brown transition-all duration-300 inline-block"
