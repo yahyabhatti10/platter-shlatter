@@ -1,11 +1,11 @@
 export const platters = [
   {
     id: 1,
-    name: "Acornplished",
+    name: "A-corn-plished",
     description:
       "A hearty corn‑themed board loaded with gourmet crackers, cheeses, nachos and salsa, cold cuts, brownie bites, and a mix of nuts, baby corns and two house‑made dips.",
     ingredients:
-      "Assorted Gourmet Crackers, 2 Kinds of Cheese, Nachos, Salsa, Cold Cuts, Brownie Bites, Pizza Chickenveges, Main Corns, Nuts & Cocktails Salads, Pickled Cucumbers, Baby Corns, 2 Dips",
+      "Hearty Corn-Filled Board, Assorted Gourmet Crackers, 2 Kinds of Artisanal Cheese, Hummus & Warm Pita, Baba Ganoush, Cold Cuts Platter, Assorted Fresh Breads, Pizza Chicken Veggies, Nachos & Zesty Salsa, Creamy Corn Dip, Masala Corns, Baby Corns, Brownie Bites, Pickled Cucumbers, Nuts & Cocktail Salads",
     sizes: [
       { size: "14”", price: "Rs. 5500" },
       { size: "16”", price: "Rs. 7000" },
@@ -16,11 +16,11 @@ export const platters = [
   },
   {
     id: 2,
-    name: "Divine Dip",
+    name: "Divine Dips",
     description:
       "A dip lover’s dream featuring four creamy dips, premium crackers, cheeses, baked croissants, devilled eggs, fresh fruits and sweet chocolate donuts.",
     ingredients:
-      "Assorted Gourmet Crackers, 2 Kinds of Cheese, Nachos, Salsa, Cold Cuts, Brownie Bites, Pickled Cucumbers, Honey BBQ Wings, Butter Croissants, Fresh Fruits, Devilled Eggs, Chocolate Donuts, Hummus, Pita, Baba Ganoush and Qeema Dip",
+      "Assorted Homemade Crackers, 2 Kinds of Artisanal Cheese, Hummus & Warm Pita, Baba Ganoush, Qeema Dip, Light Salsa Dip, Mexican Salsa Dip, Honey BBQ Wings, Cold Cuts Platter, Fresh Fruit Platter, Fruit Cocktail, Sausages on Stick, Olives, Brownie Bites, Pickled Cucumbers, Chocolate Donuts",
     sizes: [
       { size: "14”", price: "Rs. 5500" },
       { size: "16”", price: "Rs. 7000" },
@@ -184,7 +184,7 @@ export const occasionalPlatters = [
       "A grand spread featuring premium ingredients—perfect for wedding receptions and large gatherings.",
     ingredients: "Mini wraps, skewers, dips, artisan breads, dessert cups",
     sizes: [],
-    image: "/images/platter.png",
+    image: "/images/platters/deals/deal1.png",
     reverse: false,
   },
 ];
@@ -194,15 +194,15 @@ export const dealPlatters = [
     id: 14,
     name: "Crispy Delight Platter",
     description:
-      "A crunchy feast of fried roast, chowmein, mini burgers and sweet brownies—ideal for indulgent gatherings.",
+      "A flavorful mix of chicken bread, cheesy potato cutlets, chowmein, and sweet treats like lemon tarts and brownies. Great for evening hangouts or casual parties.",
     ingredients:
-      "Crispy Fried Roast, Cheese & Chicken Potato Cutlets, Chicken Chowmein, Mini Burgers, Lemon Tarts, Brownie Bites, Nachos and Salsa, Cream Cheese Dips with Crackers, Special Jam with Crackers",
+      "Homemade Chicken bread, Cheese & Chicken Potato Cutlets, Chicken Chowmein, Patties, Lemon Tarts, Brownie Bites, Nachos and Salsa, Cream Cheese Dips with Crackers, Special Jam with Crackers",
     sizes: [
-      { size: "Small", price: "Rs. 7000" },
-      { size: "Medium", price: "Rs. 8500" },
-      { size: "Large", price: "Rs. 10000" },
+      { size: "Small", price: "Rs. 6500" },
+      { size: "Medium", price: "Rs. 8000" },
+      { size: "Large", price: "Rs. 9500" },
     ],
-    image: "/images/platter.png",
+    image: "/images/platters/deals/deal1.png",
     reverse: false,
   },
   {
@@ -217,7 +217,7 @@ export const dealPlatters = [
       { size: "Medium", price: "Rs. 6500" },
       { size: "Large", price: "Rs. 8000" },
     ],
-    image: "/images/platter.png",
+    image: "/images/platters/deals/deal2.png",
     reverse: true,
   },
   {
@@ -241,13 +241,14 @@ export const dealPlatters = [
     description:
       "A balanced board of sweet coffee cups, lemon tarts, crispy chicken wings and savory bites, perfect for any event.",
     ingredients:
-      "Chicken Bread, Crispy Chicken Buffalo Wings, Chicken Patties, Coffee Choco Cups, Lemon Tarts, Nachos and Salsa, Assorted Homemade Crackers with Dips, Seasonal Fruit",
+      "Homemade Chicken Bread, Crispy Chicken Roast with Fries, Mini Burgers, Chicken Cutlets, Assorted Homemade Crackers with Dips, Seasonal Fruits, Lemon Tarts, Tea Cake, Nachos and Salsa",
+
     sizes: [
       { size: "Small", price: "Rs. 6000" },
       { size: "Medium", price: "Rs. 7000" },
       { size: "Large", price: "Rs. 8000" },
     ],
-    image: "/images/platter.png",
+    image: "/images/platters/deals/deal4.png",
     reverse: true,
   },
 ];
