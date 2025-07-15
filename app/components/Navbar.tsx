@@ -22,6 +22,7 @@ export default function Navbar() {
     { href: "/", label: "Home" },
     { href: "/our-story", label: "Our Story" },
     { href: "/platters", label: "Platters" },
+    { href: "/cakes", label: "Cakes" },
     { href: "/gallery", label: "Gallery" },
     { href: "/love-stories", label: "Love Stories" },
     { href: "/contact", label: "Contact Us" },
