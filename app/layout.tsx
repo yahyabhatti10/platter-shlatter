@@ -34,6 +34,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" type="image/svg+xml" href="/images/favicon.png" />
+      </head>
       <body
         className={`${inter.variable} ${lexend.variable} ${greatVibes.variable} ${festive.variable} font-sans`}
         suppressHydrationWarning
