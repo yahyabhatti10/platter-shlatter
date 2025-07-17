@@ -13,11 +13,11 @@ interface CakeCarouselProps {
 function CakeCarousel({ images, alt }: CakeCarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  // Auto-play every 3 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000); // Change image every 3 seconds
-
+    }, 3000);
     return () => clearInterval(interval);
   }, [images.length]);
 
@@ -34,14 +34,19 @@ function CakeCarousel({ images, alt }: CakeCarouselProps) {
   return (
     <div className="relative w-64 h-64 mx-auto">
       <div className="w-full h-full rounded-full overflow-hidden shadow-2xl border-4 border-accent-orange relative">
-        <Image
-          src={images[currentIndex] || "/placeholder.svg"}
-          alt={alt}
-          width={256}
-          height={256}
-          className="w-full h-full object-cover transition-opacity duration-500"
-          loading="lazy"
-        />
+        {images.map((src, idx) => (
+          <Image
+            key={idx}
+            src={src}
+            alt={alt}
+            width={256}
+            height={256}
+            className={`w-full h-full object-cover absolute inset-0 transition-opacity duration-500 ${
+              idx === currentIndex ? "opacity-100" : "opacity-0"
+            }`}
+            loading="lazy"
+          />
+        ))}
 
         {/* Navigation arrows */}
         {images.length > 1 && (
@@ -63,21 +68,23 @@ function CakeCarousel({ images, alt }: CakeCarouselProps) {
           </>
         )}
 
-        {/* Dots indicator */}
-        {images.length > 1 && (
-          <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex space-x-1">
-            {images.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentIndex(index)}
-                className={`w-2 h-2 rounded-full transition-all duration-200 ${
-                  index === currentIndex ? "bg-accent-orange" : "bg-white/60"
-                }`}
-                aria-label={`Go to image ${index + 1}`}
-              />
-            ))}
-          </div>
-        )}
+        {/* Always three dots indicator */}
+        <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex space-x-1">
+          {[0, 1, 2].map((dot) => (
+            <button
+              key={dot}
+              onClick={() =>
+                setCurrentIndex(
+                  (prev) => prev + (dot - (prev % 3)) + images.length
+                )
+              }
+              className={`w-2 h-2 rounded-full transition-all duration-200 ${
+                currentIndex % 3 === dot ? "bg-accent-orange" : "bg-white/60"
+              }`}
+              aria-label={`Go to image ${dot + 1}`}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
