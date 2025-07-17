@@ -128,31 +128,37 @@ export default function Cakes() {
     {
       name: "Classic Vanilla Cake",
       description:
-        "A timeless favorite with rich vanilla flavor and smooth buttercream frosting. Light, fluffy, and perfect for any celebration. Made with premium vanilla extract and the finest ingredients for an unforgettable taste.",
+        "A timeless favorite with rich Vanilla flavor and smooth Choclate Fudge frosting frosting. Light, fluffy, and perfect for any celebration. Made with premium vanilla extract and the finest ingredients for an unforgettable taste.",
       images: [
         "/images/cakes/vanilla-1.png",
         "/images/cakes/vanilla-2.png",
         "/images/cakes/vanilla-3.png",
+        "/images/cakes/vanilla-4.png",
+        "/images/cakes/vanilla-5.png",
       ],
     },
     {
-      name: "Decadent Chocolate Cake",
+      name: "Chocolate Fudge Cake",
       description:
-        "Rich, moist chocolate cake layered with creamy chocolate ganache. A chocolate lover's dream come true. Made with premium cocoa and dark chocolate for an intensely satisfying experience.",
+        "Rich, moist chocolate cake layered with Creamy Chocolate ganache. A chocolate lover's dream come true. Made with premium cocoa and dark chocolate for an intensely satisfying experience.",
       images: [
         "/images/cakes/choclate-1.png",
         "/images/cakes/choclate-2.png",
         "/images/cakes/choclate-3.png",
+        "/images/cakes/choclate-4.png",
+        "/images/cakes/choclate-5.png",
       ],
     },
     {
       name: "Elegant Red Velvet Cake",
       description:
-        "Luxurious red velvet cake with cream cheese frosting. Perfectly balanced flavors with a stunning presentation. The classic Southern favorite that adds elegance to any occasion.",
+        "Luxurious red velvet cake with Cream Cheese frosting. Perfectly balanced flavors with a stunning presentation. The classic Southern favorite that adds elegance to any occasion.",
       images: [
         "/images/cakes/red-velvet-1.png",
         "/images/cakes/red-velvet-2.png",
         "/images/cakes/red-velvet-3.png",
+        "/images/cakes/red-velvet-4.png",
+        "/images/cakes/red-velvet-5.png",
       ],
     },
   ];
@@ -177,7 +183,8 @@ export default function Cakes() {
                 exclusively with platter orders. They cannot be ordered
                 separately and serve as the perfect complement to our
                 handcrafted platters for weddings, birthdays, corporate events,
-                and other special celebrations.
+                and other special celebrations. The price of each cake is PKR
+                2000 per pound.
               </p>
             </div>
           </div>
