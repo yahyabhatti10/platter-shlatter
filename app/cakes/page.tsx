@@ -128,7 +128,7 @@ export default function Cakes() {
     {
       name: "Classic Vanilla Cake",
       description:
-        "A timeless favorite with rich Vanilla flavor and smooth Choclate Fudge frosting frosting. Light, fluffy, and perfect for any celebration. Made with premium vanilla extract and the finest ingredients for an unforgettable taste.",
+        "A timeless favorite with rich Vanilla flavor and smooth Choclate Fudge frosting. Light, fluffy, and perfect for any celebration. Made with premium vanilla extract and the finest ingredients for an unforgettable taste.",
       images: [
         "/images/cakes/vanilla-1.png",
         "/images/cakes/vanilla-2.png",
