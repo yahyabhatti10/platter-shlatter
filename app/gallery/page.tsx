@@ -7,7 +7,7 @@ export default function Gallery() {
       id: "henna-and-harmony",
       title: "Henna & Harmony",
       description: "Festive platters for vibrant Mehndi celebrations.",
-      image: "/images/gallery/covers/birthday-bliss-cover.png",
+      image: "/images/gallery/covers/henna-and-harmony-cover.png",
     },
     {
       id: "corporate-charm",
@@ -25,13 +25,13 @@ export default function Gallery() {
       id: "gather-and-glow",
       title: "Gather & Glow",
       description: "Platters designed for cozy family moments.",
-      image: "/images/gallery/covers/birthday-bliss-cover.png",
+      image: "/images/gallery/covers/gather-and-glow-cover.png",
     },
     {
       id: "candlelight-comforts",
       title: "Candlelight Comforts",
       description: "Warm and charming arrangements for intimate evenings.",
-      image: "/images/gallery/covers/birthday-bliss-cover.png",
+      image: "/images/gallery/covers/candlelight-comforts-cover.png",
     },
     {
       id: "love-in-layers",
@@ -43,26 +43,26 @@ export default function Gallery() {
       id: "picnic-whispers",
       title: "Picnic Whispers",
       description: "Fresh and playful picnic-ready platter selections.",
-      image: "/images/gallery/covers/birthday-bliss-cover.png",
+      image: "/images/gallery/covers/picnic-whispers-cover.png",
     },
     {
       id: "eid-elegance",
       title: "Eid Elegance",
       description: "Joyful spreads crafted to enhance your Eid celebrations.",
-      image: "/images/gallery/covers/birthday-bliss-cover.png",
+      image: "/images/gallery/covers/eid-elegance-cover.png",
     },
     {
       id: "noor-e-iftar",
       title: "Noor-e-Iftar",
       description:
         "Blessed arrangements to make your Ramazan evenings memorable.",
-      image: "/images/gallery/covers/birthday-bliss-cover.png",
+      image: "/images/gallery/covers/noor-e-iftar-cover.png",
     },
     {
       id: "ring-and-revel",
       title: "Ring & Revel",
       description: "Delightful bites for your engagement celebrations.",
-      image: "/images/gallery/covers/birthday-bliss-cover.png",
+      image: "/images/gallery/covers/ring-and-revel-cover.png",
     },
     {
       id: "hello-little-one",
@@ -75,7 +75,7 @@ export default function Gallery() {
       title: "Freshly Picked",
       description:
         "Colorful and juicy fruit platters made with seasonal produce.",
-      image: "/images/gallery/covers/birthday-bliss-cover.png",
+      image: "/images/gallery/covers/freshly-picked-cover.png",
     },
   ];
 
