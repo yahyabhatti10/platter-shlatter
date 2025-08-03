@@ -4,28 +4,10 @@ import Image from "next/image";
 export default function Gallery() {
   const galleryCategories = [
     {
-      id: "henna-and-harmony",
-      title: "Henna & Harmony",
-      description: "Festive platters for vibrant Mehndi celebrations.",
-      image: "/images/gallery/covers/henna-and-harmony-cover.png",
-    },
-    {
-      id: "corporate-charm",
-      title: "Corporate Charm",
-      description: "Polished presentations for your professional events.",
-      image: "/images/gallery/covers/corporate-charm-cover.png",
-    },
-    {
       id: "birthday-bliss",
       title: "Birthday Bliss",
       description: "Wholesome treats that make birthdays extra special.",
       image: "/images/gallery/covers/birthday-bliss-cover.png",
-    },
-    {
-      id: "gather-and-glow",
-      title: "Gather & Glow",
-      description: "Platters designed for cozy family and friends moments.",
-      image: "/images/gallery/covers/gather-and-glow-cover.png",
     },
     {
       id: "candlelight-comforts",
@@ -34,10 +16,29 @@ export default function Gallery() {
       image: "/images/gallery/covers/candlelight-comforts-cover.png",
     },
     {
+      id: "gather-and-glow",
+      title: "Gather & Glow",
+      description: "Platters designed for cozy family and friends moments.",
+      image: "/images/gallery/covers/gather-and-glow-cover.png",
+    },
+    {
       id: "love-in-layers",
       title: "Love in Layers",
       description: "Romantic platter experiences for Valentine's Day.",
       image: "/images/gallery/covers/love-in-layers-cover.png",
+    },
+    {
+      id: "corporate-charm",
+      title: "Corporate Charm",
+      description: "Polished presentations for your professional events.",
+      image: "/images/gallery/covers/corporate-charm-cover.png",
+    },
+    {
+      id: "freshly-picked",
+      title: "Freshly Picked",
+      description:
+        "Colorful and juicy fruit platters made with seasonal produce.",
+      image: "/images/gallery/covers/freshly-picked-cover.png",
     },
     {
       id: "picnic-whispers",
@@ -65,17 +66,16 @@ export default function Gallery() {
       image: "/images/gallery/covers/ring-and-revel-cover.png",
     },
     {
+      id: "henna-and-harmony",
+      title: "Henna & Harmony",
+      description: "Festive platters for vibrant Mehndi celebrations.",
+      image: "/images/gallery/covers/henna-and-harmony-cover.png",
+    },
+    {
       id: "hello-little-one",
       title: "Hello, Little One",
       description: "Welcoming platters to celebrate newborn arrivals.",
       image: "/images/gallery/covers/hello-little-one-cover.png",
-    },
-    {
-      id: "freshly-picked",
-      title: "Freshly Picked",
-      description:
-        "Colorful and juicy fruit platters made with seasonal produce.",
-      image: "/images/gallery/covers/freshly-picked-cover.png",
     },
   ];
 
