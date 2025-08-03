@@ -24,7 +24,7 @@ export default function Gallery() {
     {
       id: "gather-and-glow",
       title: "Gather & Glow",
-      description: "Platters designed for cozy family moments.",
+      description: "Platters designed for cozy family and friends moments.",
       image: "/images/gallery/covers/gather-and-glow-cover.png",
     },
     {
@@ -119,7 +119,7 @@ export default function Gallery() {
                 </p>
                 <Link
                   href={`/gallery/${category.id}`}
-                  className="inline-block mt-4 text-accent-orange bg-white px-4 py-2 rounded-xl border border-accent-orange hover:bg-accent-orange hover:text-white transition-all duration-200"
+                  className="w-full text-center inline-block mt-4 text-accent-orange bg-white px-4 py-2 rounded-xl border border-accent-orange hover:bg-accent-orange hover:text-white transition-all duration-200"
                 >
                   View
                 </Link>
