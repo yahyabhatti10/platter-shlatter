@@ -114,8 +114,9 @@ function LazyImageCard({ image, delay }: { image: ImageItem; delay: number }) {
   return (
     <div
       ref={ref}
-      className="aspect-square overflow-hidden rounded-2xl shadow-lg animate-fade-in-up"
-      style={{ animationDelay: `${delay}s` }}
+      className={`aspect-square overflow-hidden rounded-2xl shadow-lg transform transition-all duration-700 ease-out
+        ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+      style={{ transitionDelay: `${delay}s` }}
     >
       {inView && (
         <Image
