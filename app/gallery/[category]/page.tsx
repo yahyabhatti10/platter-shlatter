@@ -34,6 +34,7 @@ export default function GalleryDetail() {
 
   const title = categoryTitles[category] || "Gallery";
   const [images, setImages] = useState<ImageItem[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     if (!category) return;
@@ -62,6 +63,7 @@ export default function GalleryDetail() {
       }
 
       setImages(loaded);
+      setIsLoading(false);
     };
 
     loadImages();
@@ -86,12 +88,18 @@ export default function GalleryDetail() {
           </h1>
         </div>
 
-        {/* Image Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {images.map((image, index) => (
-            <LazyImageCard key={image.id} image={image} delay={index * 0.1} />
-          ))}
-        </div>
+        {/* Loader */}
+        {isLoading ? (
+          <div className="flex justify-center items-center min-h-[200px]">
+            <div className="w-12 h-12 border-4 border-accent-orange border-t-transparent rounded-full animate-spin"></div>
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {images.map((image, index) => (
+              <LazyImageCard key={image.id} image={image} delay={index * 0.1} />
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );
