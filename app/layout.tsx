@@ -4,6 +4,7 @@ import { Inter, Lexend, Great_Vibes, Festive } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const lexend = Lexend({ subsets: ["latin"], variable: "--font-lexend" });
@@ -44,6 +45,7 @@ export default function RootLayout({
         <Navbar />
         <main className="min-h-screen">{children}</main>
         <Footer />
+        <SpeedInsights />
       </body>
     </html>
   );
