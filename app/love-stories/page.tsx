@@ -187,7 +187,7 @@ export default function LoveStories() {
               alt="Selected review"
               width={400}
               height={1000}
-              className="max-w-full max-h-[80vh] rounded-xl"
+              className="max-w-[80vw] max-h-[80vh] rounded-xl"
             />
           </div>
         </div>
