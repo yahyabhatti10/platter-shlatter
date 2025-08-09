@@ -1,4 +1,5 @@
 "use client";
+
 import { useState } from "react";
 import Image from "next/image";
 import { Heart, X } from "lucide-react";
@@ -170,8 +171,8 @@ export default function LoveStories() {
             <Image
               src={selectedImage}
               alt="Selected review"
-              width={350}
-              height={900}
+              width={400}
+              height={1000}
               className="max-w-full max-h-[80vh] rounded-xl"
             />
           </div>
@@ -199,9 +200,8 @@ export default function LoveStories() {
             {testimonials.map((testimonial, index) => (
               <div
                 key={testimonial.id}
-                className="relative group h-96 rounded-xl overflow-hidden cursor-pointer animate-fade-in-up"
+                className="relative group h-96 rounded-xl overflow-hidden animate-fade-in-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
-                onClick={() => setSelectedImage(testimonial.image)}
               >
                 <Image
                   src={testimonial.image}
@@ -211,7 +211,7 @@ export default function LoveStories() {
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110 rounded-xl"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-70 group-hover:bg-opacity-70 transition-opacity duration-300 rounded-xl">
+                <div className="absolute inset-0 bg-black bg-opacity-75 group-hover:bg-opacity-70 transition-opacity duration-300 rounded-xl">
                   <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-6 text-center">
                     <h3 className="text-2xl font-lexend mb-2">
                       {testimonial.name}
@@ -219,9 +219,18 @@ export default function LoveStories() {
                     <p className="text-sm mb-4 text-accent-orange">
                       {testimonial.event}
                     </p>
-                    <p className="italic leading-relaxed">
+                    <p className="italic leading-relaxed mb-4">
                       "{testimonial.quote}"
                     </p>
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setSelectedImage(testimonial.image);
+                      }}
+                      className="px-4 py-2 bg-accent-orange text-white rounded-xl hover:bg-opacity-80 transition-colors duration-300 font-medium cursor-pointer"
+                    >
+                      View
+                    </button>
                   </div>
                 </div>
               </div>
