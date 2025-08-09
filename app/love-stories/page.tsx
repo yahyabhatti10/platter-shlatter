@@ -1,5 +1,4 @@
 "use client";
-
 import { useState } from "react";
 import Image from "next/image";
 import { Heart, X } from "lucide-react";
@@ -164,16 +163,16 @@ export default function LoveStories() {
           <div className="relative">
             <button
               onClick={() => setSelectedImage(null)}
-              className="absolute top-2 right-2 text-white text-2xl"
+              className="absolute top-2 right-2 text-white text-2xl z-10"
             >
               <X />
             </button>
             <Image
               src={selectedImage}
               alt="Selected review"
-              width={800}
-              height={800}
-              className="max-w-full max-h-[80vh] rounded-lg"
+              width={350}
+              height={900}
+              className="max-w-full max-h-[80vh] rounded-xl"
             />
           </div>
         </div>
@@ -200,7 +199,7 @@ export default function LoveStories() {
             {testimonials.map((testimonial, index) => (
               <div
                 key={testimonial.id}
-                className="relative group h-96 rounded-lg overflow-hidden cursor-pointer animate-fade-in-up"
+                className="relative group h-96 rounded-xl overflow-hidden cursor-pointer animate-fade-in-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
                 onClick={() => setSelectedImage(testimonial.image)}
               >
@@ -209,10 +208,10 @@ export default function LoveStories() {
                   alt={testimonial.name}
                   width={400}
                   height={400}
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110 rounded-xl"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-70 group-hover:bg-opacity-70 transition-opacity duration-300">
+                <div className="absolute inset-0 bg-black bg-opacity-70 group-hover:bg-opacity-70 transition-opacity duration-300 rounded-xl">
                   <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-6 text-center">
                     <h3 className="text-2xl font-lexend mb-2">
                       {testimonial.name}
