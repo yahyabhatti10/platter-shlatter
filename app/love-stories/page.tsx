@@ -1,11 +1,25 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { Heart, X } from "lucide-react";
 
 export default function LoveStories() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  // Disable scrolling when popup is open
+  useEffect(() => {
+    if (selectedImage) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+
+    // Cleanup function to restore scrolling when component unmounts
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [selectedImage]);
 
   const testimonials = [
     {
@@ -211,7 +225,7 @@ export default function LoveStories() {
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110 rounded-xl"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-75 group-hover:bg-opacity-70 transition-opacity duration-300 rounded-xl">
+                <div className="absolute inset-0 bg-black bg-opacity-70 group-hover:bg-opacity-70 transition-opacity duration-300 rounded-xl">
                   <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-6 text-center">
                     <h3 className="text-2xl font-lexend mb-2">
                       {testimonial.name}
